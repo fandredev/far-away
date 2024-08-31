@@ -16,11 +16,21 @@
     "typescript": "^5.5.4",
     "web-vitals": "^2.1.4"
   },
+  "author": {
+    "name": "Felipe André",
+    "email": "profissionalf.andre@gmail.com",
+    "url": "https://portfoliofelipe-andre-projects.vercel.app/"
+  },
+  "bugs": {
+    "email": "profissionalf.andre@gmail.com",
+    "url": "https://github.com/fandredev/far-away/issues"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage"
   },
   "eslintConfig": {
     "extends": [
