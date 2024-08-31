@@ -17,7 +17,6 @@
 ## Authors
 
 - [Me](https://www.linkedin.com/in/devfandre/)
-- [Udemy](https://www.udemy.com/course/the-ultimate-react-course)
 
 ## Clone this repo
 
