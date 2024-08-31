@@ -7,6 +7,7 @@ export interface PackingListItemProps {
 
 export interface ItemProps extends PackingListItemProps {
   onRemoveItem: (id: number) => void;
+  onTogglePacked: (id: number) => void;
 }
 
 export default function Item({
@@ -15,9 +16,15 @@ export default function Item({
   quantity,
   id,
   onRemoveItem,
+  onTogglePacked,
 }: ItemProps) {
   return (
     <li>
+      <input
+        type="checkbox"
+        checked={packed}
+        onChange={() => onTogglePacked(id)}
+      />
       <span style={packed ? { textDecoration: 'line-through' } : {}}>
         {quantity} - {description}
         <button onClick={() => onRemoveItem(id)}>❌</button>

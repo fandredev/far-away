@@ -9,8 +9,8 @@ import Stats from './components/stats';
 const initialItems: PackingListItemProps[] = [
   { id: 1, description: 'Passport', quantity: 1, packed: false },
   { id: 2, description: 'Phone Charger', quantity: 1, packed: false },
-  { id: 8, description: 'Toothbrush', quantity: 1, packed: false },
-  { id: 9, description: 'Toothpaste', quantity: 1, packed: false },
+  { id: 3, description: 'Toothbrush', quantity: 1, packed: false },
+  { id: 4, description: 'Toothpaste', quantity: 1, packed: false },
 ];
 
 export default function App() {
@@ -24,11 +24,23 @@ export default function App() {
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   }
 
+  function handleTogglePacked(id: number) {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
+  }
+
   return (
     <div className="app">
       <Logo />
       <Form onAddItems={handleAddItems} />
-      <PackingList onRemoveItem={handleRemoveItem} items={items} />
+      <PackingList
+        onTogglePacked={handleTogglePacked}
+        onRemoveItem={handleRemoveItem}
+        items={items}
+      />
       <Stats />
     </div>
   );
