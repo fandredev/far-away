@@ -24,6 +24,14 @@ export default function App() {
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   }
 
+  function handleRemoveList() {
+    const confirmed = window.confirm(
+      'Are you sure you want to remove all items?'
+    );
+
+    if (confirmed) setItems([]);
+  }
+
   function handleTogglePacked(id: number) {
     setItems((prevItems) =>
       prevItems.map((item) =>
@@ -39,6 +47,7 @@ export default function App() {
       <PackingList
         onTogglePacked={handleTogglePacked}
         onRemoveItem={handleRemoveItem}
+        onRemoveAllList={handleRemoveList}
         items={items}
       />
       <Stats items={items} />

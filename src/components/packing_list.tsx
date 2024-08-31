@@ -5,12 +5,14 @@ interface PackingListProps {
   items: PackingListItemProps[];
   onRemoveItem: (id: number) => void;
   onTogglePacked: (id: number) => void;
+  onRemoveAllList: () => void;
 }
 
 export default function PackingList({
   items,
   onRemoveItem,
   onTogglePacked,
+  onRemoveAllList,
 }: PackingListProps) {
   const [sortBy, setSortBy] = useState('input');
 
@@ -48,6 +50,8 @@ export default function PackingList({
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed status</option>
         </select>
+
+        <button onClick={onRemoveAllList}>Clear list</button>
       </div>
     </div>
   );
