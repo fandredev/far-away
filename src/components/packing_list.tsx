@@ -1,3 +1,4 @@
+import { useState, ChangeEvent } from 'react';
 import Item, { PackingListItemProps } from './item';
 
 interface PackingListProps {
@@ -11,10 +12,28 @@ export default function PackingList({
   onRemoveItem,
   onTogglePacked,
 }: PackingListProps) {
+  const [sortBy, setSortBy] = useState('input');
+
+  function handleSortChange(event: ChangeEvent<HTMLSelectElement>) {
+    setSortBy(event.target.value);
+  }
+
+  let sortedItems;
+
+  if (sortBy === 'description') {
+    sortedItems = [...items].sort((a, b) =>
+      a.description.localeCompare(b.description)
+    );
+  } else if (sortBy === 'packed') {
+    sortedItems = [...items].sort((a, b) => +a.packed - +b.packed);
+  } else {
+    sortedItems = items;
+  }
+
   return (
     <div className="list">
       <ul>
-        {items.map((item) => (
+        {sortedItems.map((item) => (
           <Item
             key={item.id}
             {...item}
@@ -23,6 +42,13 @@ export default function PackingList({
           />
         ))}
       </ul>
+      <div className="actions">
+        <select value={sortBy} onChange={handleSortChange}>
+          <option value="input">Sort by input order</option>
+          <option value="description">Sort by description</option>
+          <option value="packed">Sort by packed status</option>
+        </select>
+      </div>
     </div>
   );
 }
