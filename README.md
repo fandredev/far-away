@@ -1,6 +1,5 @@
 # Far away
-
-![image](https://github.com/user-attachments/assets/a17ff9f9-be63-4cde-af47-e560bd9b7c4d)
+![image](https://github.com/user-attachments/assets/3f97ca03-e533-4ab7-8bdc-d6d6bd906c33)
 
 # Stack used
 
