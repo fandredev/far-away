@@ -1,9 +1,10 @@
 # Far away
+
 ![image](https://github.com/user-attachments/assets/3f97ca03-e533-4ab7-8bdc-d6d6bd906c33)
 
 # Stack used
 
-<img src="https://skillicons.dev/icons?i=typescript,react,css,html,git,vercel&theme=dark" />
+<img src="https://skillicons.dev/icons?i=typescript,react,css,html,git,vercel,githubactions,jest&theme=dark" />
 
 ### Outras ferramentas:
 
