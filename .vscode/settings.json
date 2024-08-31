@@ -1,0 +1,29 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "typescript.suggestionActions.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "editor.fontSize": 15,
+  "typescript.suggest.autoImports": true,
+  "editor.fontLigatures": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  // Prettier
+  "prettier.singleQuote": true,
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "eslint.run": "onSave"
+}

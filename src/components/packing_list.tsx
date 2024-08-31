@@ -1,6 +1,10 @@
-import Item from './item';
+import Item, { ItemProps } from './item';
 
-export default function PackingList({ items }) {
+interface PackingListProps {
+  items: ItemProps[];
+}
+
+export default function PackingList({ items }: PackingListProps) {
   return (
     <div className="list">
       <ul>

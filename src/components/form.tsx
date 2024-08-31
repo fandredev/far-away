@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
+import { ItemProps } from './item';
 
-export default function Form({ onAddItems }) {
+interface FormProps {
+  onAddItems: (newItem: ItemProps) => void;
+}
+
+export default function Form({ onAddItems }: FormProps) {
   const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState(1);
 
-  function handleSubmit(event) {
+  function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
     const newItem = {
