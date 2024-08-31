@@ -70,6 +70,10 @@ input {
   background-color: #76c7ad;
 }
 
+.add-form button:disabled {
+  opacity: .5
+}
+
 .list {
   background-color: #5a3e2b;
   color: #ffebb3;

@@ -1,7 +1,45 @@
-export default function Form() {
+import { useState } from 'react';
+
+export default function Form({ onAddItems }) {
+  const [description, setDescription] = useState('');
+  const [quantity, setQuantity] = useState(1);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const newItem = {
+      description,
+      quantity,
+      packed: false,
+      id: Date.now(),
+    };
+
+    onAddItems(newItem);
+    clearForm();
+  }
+
+  function clearForm() {
+    setDescription('');
+    setQuantity(1);
+  }
+
   return (
-    <div className="add-form">
+    <form onSubmit={handleSubmit} className="add-form">
       <h3>What do you need for your 😍 trip?</h3>
-    </div>
+      <select value={quantity} onChange={(e) => setQuantity(+e.target.value)}>
+        {Array.from({ length: 20 }, (_, i) => i + 1).map((number) => (
+          <option key={number} value={number}>
+            {number}
+          </option>
+        ))}
+      </select>
+      <input
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        type="text"
+        placeholder="Item..."
+      />
+      <button disabled={!description}>Add</button>
+    </form>
   );
 }
