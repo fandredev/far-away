@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Logo from "../logo";
 
-describe("Logo comoponent", () => {
+describe(`${Logo.name} component`, () => {
   it("should render components no errors when the component is rendered", () => {
     render(<Logo />);
 

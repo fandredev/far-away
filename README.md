@@ -11,6 +11,8 @@
 - [Prettier](https://eslint.org/)
 - [Eslint](https://prettier.io/)
 - [Create React App](https://create-react-app.dev/)
+- [asdf](https://asdf-vm.com/)
+- [Testing Library](https://testing-library.com/)
 
 ## Authors
 
@@ -39,6 +41,12 @@ git clone git@github.com:fandredev/far-away.git
 
 ```
  npm run start
+```
+
+## Run tests
+
+```
+ npm run test
 ```
 
 ## :mailbox_with_no_mail: Contatos

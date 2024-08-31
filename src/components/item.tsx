@@ -19,13 +19,13 @@ export default function Item({
   onTogglePacked,
 }: ItemProps) {
   return (
-    <li>
+    <li data-testid="item">
       <input
         type="checkbox"
         checked={packed}
         onChange={() => onTogglePacked(id)}
       />
-      <span style={packed ? { textDecoration: 'line-through' } : {}}>
+      <span style={packed ? { textDecoration: "line-through" } : {}}>
         {quantity} - {description}
         <button onClick={() => onRemoveItem(id)}>❌</button>
       </span>
