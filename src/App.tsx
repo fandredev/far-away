@@ -41,7 +41,7 @@ export default function App() {
         onRemoveItem={handleRemoveItem}
         items={items}
       />
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
